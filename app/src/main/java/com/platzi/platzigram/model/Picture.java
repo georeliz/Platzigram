@@ -9,7 +9,7 @@ public class Picture {
     private String picture;
     private String userName;
     private String time;
-    private String like_number = "0 ";
+    private String like_number = "0";
 
     public Picture(String picture, String userName, String time, String like_number) {
         this.picture = picture;

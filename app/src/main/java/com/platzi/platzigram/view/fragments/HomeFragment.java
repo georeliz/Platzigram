@@ -33,7 +33,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-        showToolbar("Home",false,view);
+        showToolbar(getResources().getString(R.string.menu_home),false,view);
         RecyclerView picturesRecycler = (RecyclerView) view.findViewById(R.id.pictureRecycler);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
@@ -49,17 +49,17 @@ public class HomeFragment extends Fragment {
 
     public ArrayList<Picture> buidPictures(){
         ArrayList<Picture> pictures = new ArrayList<>();
-        pictures.add(new Picture("http://www.novalandtours.com/images/guide/guilin.jpg", "Uriel Ramírez", "4 días", "3"));
-        pictures.add(new Picture("http://www.enjoyart.com/library/landscapes/tuscanlandscapes/large/Tuscan-Bridge--by-Art-Fronckowiak-.jpg", "Uriel Ramírez", "4 días", "3"));
-        pictures.add(new Picture("http://www.educationquizzes.com/library/KS3-Geography/river-1-1.jpg", "Uriel Ramírez", "4 días", "3"));
+        pictures.add(new Picture("http://www.novalandtours.com/images/guide/guilin.jpg", "Uriel Ramírez", "4 días", "3 Me Gusta"));
+        pictures.add(new Picture("http://www.enjoyart.com/library/landscapes/tuscanlandscapes/large/Tuscan-Bridge--by-Art-Fronckowiak-.jpg", "Uriel Ramírez", "4 días", "3 Me Gusta"));
+        pictures.add(new Picture("http://www.educationquizzes.com/library/KS3-Geography/river-1-1.jpg", "Uriel Ramírez", "4 días", "3 Me Gusta"));
         return pictures;
     }
 
     public void showToolbar(String title, boolean upButton, View view){
         Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        ((AppCompatActivity)getActivity()).setSupportActionBar(toolbar);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setTitle(title);
-        ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
+        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(upButton);
     }
 
 }
